@@ -1,1 +1,6 @@
 @import "../node_modules/bulma/css/bulma.css";
+
+.react-loader {
+    text-align: center;
+    vertical-align: middle;
+}
