@@ -1,0 +1,27 @@
+{
+  "name": "react-lolsight",
+  "version": "0.1.0",
+  "description": "League of Legends stat tracking front-end in react.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "jonathan-pe",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "webpack": "^4.8.1",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.1.3"
+  }
+}
