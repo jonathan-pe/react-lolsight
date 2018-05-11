@@ -3,6 +3,7 @@ var config = {
     output: {
         path: '/',
         filename: 'index.js',
+        publicPath: '/'
     },
     devServer: {
         inline: true,
@@ -23,6 +24,9 @@ var config = {
                 use: ['style-loader', 'css-loader']
             }
         ]
+    },
+    devServer: {
+        historyApiFallback: true
     },
     mode: 'development'
 }

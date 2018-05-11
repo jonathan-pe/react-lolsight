@@ -8,7 +8,7 @@ import Summoner from './summoner/Summoner.jsx';
 class App extends React.Component {
     render() {
         return (
-            <div>
+            <div id="lolsight">
                 <TopNav />
                 <div>
                     <Route exact path="/" component={Home}/>
