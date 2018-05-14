@@ -13,7 +13,7 @@ function ChampionsList(props) {
                     />
                 </div>
             ) : (
-                <table className="table is-bordered is-hoverable is-fullwidth championList">
+                <table id="championsList" className="table is-bordered is-hoverable">
                     <tbody>
                         {props.champions.map(champion => (
                             <tr>
