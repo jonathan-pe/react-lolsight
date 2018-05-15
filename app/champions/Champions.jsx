@@ -8,8 +8,18 @@ class Champions extends React.Component {
 
         this.state = {
             champions: [],
+            filteredList: [],
             loadingChampions: true
         };
+    }
+
+    filterList(event) {
+        let updatedList = this.state.champions;
+        updatedList = updatedList.filter(function (champion) {
+            return champion.name.toLowerCase().search(
+                event.target.value.toLowerCase()) !== -1;
+        });
+        this.setState({ filteredList: updatedList });
     }
 
     componentDidMount() {
@@ -17,6 +27,7 @@ class Champions extends React.Component {
             .then(response => response.json())
             .then(champions => this.setState({
                 champions: champions,
+                filteredList: champions,
                 loadingChampions: false
             }));
     }
@@ -24,8 +35,9 @@ class Champions extends React.Component {
     render() {
         return (
             <div className="section">
+                <input className="input" type="text" placeholder="Search..." onChange={this.filterList.bind(this)} />
                 <ChampionsList 
-                    champions={this.state.champions}
+                    champions={this.state.filteredList}
                     loading={this.state.loadingChampions}
                 />
             </div>
